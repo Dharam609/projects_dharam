@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgimg"
+    tools:context=".EventJoinedDetail">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2F3C81"
+        app:layout_collapseMode="pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonImg"
+            android:layout_width="200px"
+            android:layout_height="150px"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_create" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <include
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtEndTime99"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView139"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtStTime99" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtStDate99"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView189"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView189" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtStTime99"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView139"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView189" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtEndDate99"-->
+<!--        android:layout_width="70dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_marginTop="6dp"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/textView139"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView199"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView189" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView109"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="16dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="34dp"-->
+<!--        android:text="Event"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtEventTitle99"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="26dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView109" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView129"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="28dp"-->
+<!--        android:layout_marginLeft="28dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Detail"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView199" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView139"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginLeft="32dp"-->
+<!--        android:text="Time"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/txtStDate99"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/txtStDate99" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView149"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginLeft="32dp"-->
+<!--        android:text="Time"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/txtEndDate99"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView199" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtEvtDetail9"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView129" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView189"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="34dp"-->
+<!--        android:text="Start"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView109" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView199"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="6dp"-->
+<!--        android:text="End"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView189"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView189" />-->
+
+    <Button
+        android:id="@+id/btnDereg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="168dp"
+        android:background="@drawable/corner_round"
+        android:backgroundTint="@color/md_amber_800"
+        android:text="UnJoin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailLay111" />
+
+    <LinearLayout
+        android:id="@+id/detailLay111"
+        android:layout_width="358dp"
+        android:layout_height="438dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/txtEventTitle99"
+            style="@style/headerText"
+            android:layout_marginBottom="10dp"
+            android:text="Title" />
+
+
+        <View style="@style/eventDetailsView" />
+
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/nameImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_time" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="Start Date and Time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/txtStDate99"
+                style="@style/profileDetailsMiniText"
+                android:layout_marginLeft="11dp"
+
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="Start date" />
+
+            <TextView
+                android:id="@+id/txtStTime99"
+                style="@style/profileDetailsMiniText"
+                android:layout_marginLeft="11dp"
+
+                android:layout_toRightOf="@id/txtStDate99"
+                android:text="start time" />
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/mobileImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_time" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="End Date and Time" />
+
+            <TextView
+                android:id="@+id/txtEndDate99"
+                style="@style/profileDetailsMiniText"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="End Time" />
+
+            <TextView
+                android:id="@+id/txtEndTime99"
+                style="@style/profileDetailsMiniText"
+                android:layout_toRightOf="@id/txtEndDate99"
+                android:text="End Time" />
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+
+        <RelativeLayout
+            style="@style/eventDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/dobImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_details" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/dobImageView"
+                android:text="Description" />
+
+            <TextView
+                android:id="@+id/txtEvtDetail9"
+                style="@style/eventDetailsMiniText"
+                android:layout_width="239dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@id/dobImageView"
+                android:hint="Details of the event" />
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

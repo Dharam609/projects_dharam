@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_start"
+    tools:context=".AdUserDetail">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2F3C81"
+        app:layout_collapseMode="pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <include
+        layout="@layout/admin_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/txtAcctDerail"-->
+    <!--        android:layout_width="341dp"-->
+    <!--        android:layout_height="218dp"-->
+    <!--        android:layout_marginStart="40dp"-->
+    <!--        android:layout_marginTop="25dp"-->
+    <!--        android:layout_marginEnd="40dp"-->
+    <!--        android:text="TextView"-->
+    <!--        android:textColor="#070706"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
+
+    <Button
+        android:id="@+id/btnDeAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/corner_round"
+        android:backgroundTint="#BA332A"
+        android:text="Deactivate Account"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileLayouts1" />
+
+    <Button
+        android:id="@+id/btnAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/corner_round"
+        android:backgroundTint="#4CAF50"
+        android:text="Activate Acct"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileLayouts1" />
+
+    <LinearLayout
+        android:id="@+id/profileLayouts1"
+        android:layout_width="373dp"
+        android:layout_height="514dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            style="@style/headerText"
+            android:layout_marginBottom="10dp"
+            android:text="User Details" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/nameImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_name1" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text=" First Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/txtFName"
+                style="@style/profileDetailsMiniText"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="David" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/mobileImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_name1" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="Last Name" />
+
+            <TextView
+                android:id="@+id/txtLName"
+                style="@style/profileDetailsMiniText"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="Yu-Shi" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/emailImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_email" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/emailImageView"
+                android:text="Email" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                style="@style/profileDetailsMiniText"
+                android:layout_toRightOf="@id/emailImageView"
+                android:text="abc@gbc.ca" />
+
+        </RelativeLayout>
+
+        <!--        <View style="@style/proifleDetailsView" />-->
+
+        <!--        <RelativeLayout-->
+        <!--            style="@style/profileDetailsLayout"-->
+        <!--            android:layout_height="53dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/addressImageView"-->
+        <!--                style="@style/profileDetailsImage"-->
+        <!--                android:src="@drawable/ic_users" />-->
+
+        <!--            <TextView-->
+        <!--                style="@style/profileDetailsTextMain"-->
+        <!--                android:layout_toRightOf="@id/addressImageView"-->
+        <!--                android:text="Address" />-->
+
+        <!--            <TextView-->
+        <!--                style="@style/profileDetailsMiniText"-->
+        <!--                android:layout_toRightOf="@id/addressImageView"-->
+        <!--                android:text="Avenue 2nd Street NW SY." />-->
+
+        <!--        </RelativeLayout>-->
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="109dp">
+
+            <ImageView
+                android:id="@+id/dobImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_question" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/dobImageView"
+                android:text="Security Question" />
+
+            <TextView
+                android:id="@+id/txtSecQues"
+                style="@style/profileDetailsMiniText"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@id/dobImageView"
+                android:hint="What is your dream job?" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgimg"
+    tools:context=".EventOwnDetail">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2F3C81"
+        app:layout_collapseMode="pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonImg"
+            android:layout_width="200px"
+            android:layout_height="150px"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+
+            android:src="@drawable/ic_create" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+
+    <include
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView61"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:text="Event"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView56"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Start"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtEventTitle" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/txtStDate6"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView56"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView56" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView57"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:text="Time"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/txtStDate6"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView56" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/txtStTime6"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView57"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView56" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView58"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="End"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView56"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView56" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/txtEndDate6"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView58"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView58" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView59"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:text="Time"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/txtEndDate6"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView58" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/txtEndTime6"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        android:textSize="16dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView59"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView58" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView60"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:text="Detail"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView58"-->
+<!--        android:textColor="#ECE9E5" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/txtEvtDetail6"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView60" />-->
+
+    <Button
+        android:id="@+id/btnTereminate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/corner_round"
+        android:backgroundTint="#8C0D04"
+        android:text="Terminate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnUpdateOwn"
+        app:layout_constraintTop_toBottomOf="@+id/detailLay11" />
+
+    <Button
+        android:id="@+id/btnUpdateOwn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="76dp"
+        android:background="@drawable/corner_round"
+        android:backgroundTint="@color/md_amber_800"
+        android:text="Update"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailLay11" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/txtEventTitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+<!--        android:textColor="#ECE9E5"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView61" />-->
+
+    <include
+        android:id="@+id/include11"
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/detailLay11"
+        android:layout_width="358dp"
+        android:layout_height="438dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <EditText
+            android:id="@+id/txtEventTitle"
+            style="@style/headerText"
+            android:layout_marginBottom="10dp"
+            android:text="Title" />
+
+
+        <View style="@style/eventDetailsView" />
+
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/nameImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_time" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="Start Date and Time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <EditText
+                android:id="@+id/txtStDate6"
+                style="@style/profileDetailsMiniText"
+                android:layout_marginLeft="11dp"
+
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="Start date" />
+
+            <EditText
+                android:id="@+id/txtStTime6"
+                style="@style/profileDetailsMiniText"
+                android:layout_marginLeft="11dp"
+
+                android:layout_toRightOf="@id/txtStDate6"
+                android:text="start time" />
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/mobileImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_time" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="End Date and Time" />
+
+            <EditText
+                android:id="@+id/txtEndDate6"
+                style="@style/profileDetailsMiniText"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="End Time" />
+
+            <EditText
+                android:id="@+id/txtEndTime6"
+                style="@style/profileDetailsMiniText"
+                android:layout_toRightOf="@id/txtEndDate6"
+                android:text="End Time" />
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+
+        <RelativeLayout
+            style="@style/eventDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/dobImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_details" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/dobImageView"
+                android:text="Description" />
+
+            <EditText
+                android:id="@+id/txtEvtDetail6"
+                style="@style/eventDetailsMiniText"
+                android:layout_width="239dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@id/dobImageView"
+                android:hint="Details of the event" />
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
