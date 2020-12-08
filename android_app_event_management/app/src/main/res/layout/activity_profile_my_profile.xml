@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/masterView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgimg"
+    tools:context=".MyProfile">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2F3C81"
+        app:layout_collapseMode="pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonImg"
+            android:layout_width="200px"
+            android:layout_height="150px"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+
+            android:src="@drawable/ic_create" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/md_amber_800"
+        android:text="Edit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileLayout" />
+
+    <LinearLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="373dp"
+        android:layout_height="514dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            style="@style/headerText"
+            android:layout_marginBottom="10dp"
+            android:text="My Profile Details" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/nameImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_name1" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text=" First Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/txtFName"
+                style="@style/profileDetailsMiniText"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="David" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/mobileImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_name1" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="Last Name" />
+
+            <TextView
+                android:id="@+id/txtLName"
+                style="@style/profileDetailsMiniText"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="Yu-Shi" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_height="87dp">
+
+            <ImageView
+                android:id="@+id/emailImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_email" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/emailImageView"
+                android:text="Email" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                style="@style/profileDetailsMiniText"
+                android:layout_toRightOf="@id/emailImageView"
+                android:text="abc@gbc.ca" />
+
+        </RelativeLayout>
+
+        <!--        <View style="@style/proifleDetailsView" />-->
+
+        <!--        <RelativeLayout-->
+        <!--            style="@style/profileDetailsLayout"-->
+        <!--            android:layout_height="53dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/addressImageView"-->
+        <!--                style="@style/profileDetailsImage"-->
+        <!--                android:src="@drawable/ic_users" />-->
+
+        <!--            <TextView-->
+        <!--                style="@style/profileDetailsTextMain"-->
+        <!--                android:layout_toRightOf="@id/addressImageView"-->
+        <!--                android:text="Address" />-->
+
+        <!--            <TextView-->
+        <!--                style="@style/profileDetailsMiniText"-->
+        <!--                android:layout_toRightOf="@id/addressImageView"-->
+        <!--                android:text="Avenue 2nd Street NW SY." />-->
+
+        <!--        </RelativeLayout>-->
+
+        <View style="@style/proifleDetailsView" />
+
+        <RelativeLayout
+            style="@style/profileDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="109dp">
+
+            <ImageView
+                android:id="@+id/dobImageView"
+                style="@style/profileDetailsImage"
+                android:src="@drawable/ic_question" />
+
+            <TextView
+                style="@style/profileDetailsTextMain"
+                android:layout_toRightOf="@id/dobImageView"
+                android:text="Security Question" />
+
+            <TextView
+                android:id="@+id/txtSecQues"
+                style="@style/profileDetailsMiniText"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@id/dobImageView"
+                android:hint="What is your dream job?" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

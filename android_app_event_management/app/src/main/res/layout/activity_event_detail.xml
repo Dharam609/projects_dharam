@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkgimg"
+    tools:context=".EventDetail"
+    tools:layout_editor_absoluteY="81dp">
+
+    <!--        app:layout_constraintStart_toStartOf="@+id/txtEventCode"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtEventCode" />-->
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2F3C81"
+        app:layout_collapseMode="pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/buttonImg"
+            android:layout_width="200px"
+            android:layout_height="150px"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+
+            android:src="@drawable/ic_create" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <Button
+        android:id="@+id/btnMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/corner_round"
+        android:backgroundTint="#D16F90"
+        android:text="Message"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnContact"
+        app:layout_constraintStart_toEndOf="@+id/btnJoin"
+        app:layout_constraintTop_toBottomOf="@+id/detailLay1" />
+
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/corner_round"
+        android:backgroundTint="#009688"
+        android:text="Email"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnContact"
+        app:layout_constraintTop_toBottomOf="@+id/detailLay1" />
+
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/corner_round"
+        android:backgroundTint="#9690A1"
+        android:text="Contact Us"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnEmail"
+        app:layout_constraintStart_toEndOf="@+id/btnMessage"
+        app:layout_constraintTop_toBottomOf="@+id/detailLay1" />
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/corner_round"
+        android:backgroundTint="@color/md_amber_800"
+        android:text="Join"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailLay1" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/detailLay1"
+        android:layout_width="359dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/txtEventTitle"
+            style="@style/headerText"
+            android:layout_marginBottom="10dp"
+            android:text="Title" />
+
+        <View style="@style/eventDetailsView" />
+
+        <RelativeLayout
+            style="@style/eventDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:id="@+id/shareImage1"
+                style="@style/eventDetailsLayout"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:contentDescription="Share content"
+                android:text="share"
+                android:gravity="center"
+                app:srcCompat="@drawable/ic_share"
+
+                />
+
+            <Button
+                android:id="@+id/btnCal"
+                android:layout_width="99dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="0dp"
+                android:layout_toRightOf="@id/shareImage1"
+                android:background="@android:drawable/ic_menu_my_calendar"
+                android:gravity="bottom|center"
+                android:text="Google Calendar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/material_drawer_dark_background"
+                android:textSize="12sp" />
+
+            <com.willy.ratingbar.RotationRatingBar
+
+                android:id="@+id/ratingBarDetail"
+                style="@android:style/Widget.Holo.Light.RatingBar.Indicator"
+                android:layout_width="170dp"
+                android:layout_height="37dp"
+                android:layout_toRightOf="@id/btnCal"
+                android:backgroundTint="#A50202"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:isIndicator="true"
+                android:max="5"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="0.5"
+                android:theme="@style/RatingBar"
+                app:layout_constraintHeight_max="10dp"
+                app:layout_constraintHeight_min="wrap"
+                tools:layout_editor_absoluteX="57dp"
+                tools:layout_editor_absoluteY="92dp" />
+
+            <ImageView
+                android:id="@+id/imgChecked"
+                android:layout_width="34dp"
+                android:layout_height="33dp"
+                android:layout_toRightOf="@id/ratingBarDetail"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/checked"
+                tools:layout_editor_absoluteX="354dp"
+                tools:layout_editor_absoluteY="560dp" />
+
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+
+
+        <RelativeLayout
+            style="@style/eventDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="39dp">
+
+            <ImageView
+                android:id="@+id/nameImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_time" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                style="@style/eventDetailsTextMain"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="Start Date and Time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/txtStDate"
+                style="@style/eventDetailsMiniText"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/nameImageView"
+                android:text="Start date" />
+
+            <TextView
+                android:id="@+id/txtStTime"
+                style="@style/eventDetailsMiniText"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/txtStDate"
+                android:text="start time" />
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+
+        <RelativeLayout
+            style="@style/eventDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="39dp">
+
+            <ImageView
+                android:id="@+id/mobileImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_time" />
+
+            <TextView
+                style="@style/eventDetailsTextMain"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="End Date and Time" />
+
+            <TextView
+                android:id="@+id/txtEndDate"
+                style="@style/eventDetailsMiniText"
+                android:layout_toRightOf="@id/mobileImageView"
+                android:text="End Time" />
+
+            <TextView
+                android:id="@+id/txtEndTime"
+                style="@style/eventDetailsMiniText"
+                android:layout_toRightOf="@id/txtEndDate"
+                android:text="End Time" />
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+
+        <RelativeLayout
+            style="@style/eventDetailsLayout"
+            android:layout_height="39dp">
+
+            <ImageView
+                android:id="@+id/emailImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_code" />
+
+            <TextView
+                style="@style/eventDetailsTextMain"
+                android:layout_toRightOf="@id/emailImageView"
+                android:text="Event Code" />
+
+            <TextView
+                android:id="@+id/txtEventCode"
+                style="@style/eventDetailsMiniText"
+                android:layout_toRightOf="@id/emailImageView"
+                android:text="EventCode" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/txtEmail1"-->
+            <!--                style="@style/eventDetailsMiniText"-->
+            <!--                android:layout_toRightOf="@id/txtEventCode"-->
+            <!--                android:text="EventCodea" />-->
+
+        </RelativeLayout>
+
+        <!--        <View style="@style/eventDetailsView" />-->
+
+        <!--        <RelativeLayout-->
+        <!--            style="@style/eventDetailsLayout"-->
+        <!--            android:layout_height="53dp">-->
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/emailImageView1"-->
+        <!--                style="@style/eventDetailsImage"-->
+        <!--                android:src="@drawable/ic_email" />-->
+
+        <!--            <TextView-->
+        <!--                style="@style/eventDetailsTextMain"-->
+        <!--                android:layout_toRightOf="@id/emailImageView1"-->
+        <!--                android:text="Email" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/txtEmail123"-->
+        <!--                style="@style/eventDetailsMiniText"-->
+        <!--                android:layout_toRightOf="@id/emailImageView1"-->
+        <!--                android:text="abc@gbc.ca" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/txtEmail1234"-->
+        <!--                style="@style/eventDetailsMiniText"-->
+        <!--                android:layout_toRightOf="@id/txtEmail123"-->
+        <!--                android:text="abc@gbc.ca" />-->
+
+
+        <!--        </RelativeLayout>-->
+
+        <View style="@style/eventDetailsView" />
+
+        <RelativeLayout
+            style="@style/eventDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="97dp">
+
+            <ImageView
+                android:id="@+id/dobImageView"
+                style="@style/eventDetailsImage"
+                android:src="@drawable/ic_details" />
+
+            <TextView
+                style="@style/eventDetailsTextMain"
+                android:layout_toRightOf="@id/dobImageView"
+                android:text="Description" />
+
+            <TextView
+                android:id="@+id/txtEvtDetail"
+                style="@style/eventDetailsMiniText"
+                android:layout_width="239dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@id/dobImageView"
+                android:hint="Details of the event" />
+
+        </RelativeLayout>
+
+        <View style="@style/eventDetailsView" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
